@@ -119,10 +119,10 @@ function CartOverlay() {
                               <div className={styles["cart-item-attribute-options"]}>
                                 {attribute.items.map((attrItem) => {
                                   const isSelected = attrItem.id === selectedValue;
-                                  const valueKebab = toKebabCase(attrItem.displayValue);
+                                  // Use item.value for test ID (matches PDP format)
                                   const testId = isSelected 
-                                    ? `cart-item-attribute-${attributeNameKebab}-${valueKebab}-selected`
-                                    : `cart-item-attribute-${attributeNameKebab}-${valueKebab}`;
+                                    ? `cart-item-attribute-${attributeNameKebab}-${attrItem.value}-selected`
+                                    : `cart-item-attribute-${attributeNameKebab}-${attrItem.value}`;
 
                                   if (attribute.type === 'swatch') {
                                     return (
