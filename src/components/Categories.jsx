@@ -9,12 +9,12 @@ function Categories() {
   return (
     <nav className={styles["header-nav"]}>
       {categories.map((category) => {
-        const isActive = location.pathname === `/categories/${category.slug}`;
+        const isActive = location.pathname === `/${category.slug}`;
         
         return (
           <Link
             key={category.slug}
-            to={`/categories/${category.slug}`}
+            to={`/${category.slug}`}
             className={`${styles["header-nav-link"]} ${isActive ? styles["header-nav-link--active"] : ""}`}
             data-testid={isActive ? "active-category-link" : "category-link"}
           >

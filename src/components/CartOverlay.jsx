@@ -54,11 +54,15 @@ function CartOverlay() {
     }
   };
 
+  // Don't render overlay content if cart is not opened
+  if (!cartOpened) {
+    return null;
+  }
+
   return (
     <div
-      className={`${styles["cart-overlay"]} ${
-        cartOpened ? styles["cart-overlay--opened"] : ""
-      }`}
+      className={`${styles["cart-overlay"]} ${styles["cart-overlay--opened"]}`}
+      data-testid="cart-overlay"
     >
       <div className={styles["cart-backdrop"]} onClick={closeCart}></div>
 

@@ -29,13 +29,13 @@ function App() {
               <Routes>
                 <Route
                   path="/"
-                  element={<Navigate to="/categories/all" replace />}
-                />
-                <Route
-                  path="/categories/:categorySlug"
-                  element={<CategoryPage />}
+                  element={<Navigate to="/all" replace />}
                 />
                 <Route path="/product/:productId" element={<ProductPage />} />
+                <Route
+                  path="/:categorySlug"
+                  element={<CategoryPage />}
+                />
                 <Route path="*" element={<NotFoundPage />}></Route>
               </Routes>
             </MainContent>
