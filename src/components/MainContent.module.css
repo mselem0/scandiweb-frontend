@@ -1,0 +1,8 @@
+.main-content {
+  margin-top: 80px;
+  padding: 80px 10px;
+  min-height: calc(100vh - 80px);
+
+  max-width: 1238px;
+  margin: 0 auto;
+}

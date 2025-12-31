@@ -1,0 +1,17 @@
+.product-price-section {
+  margin-bottom: 20px;
+}
+
+.product-price-label {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  margin-bottom: 12px;
+}
+
+.product-price-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}

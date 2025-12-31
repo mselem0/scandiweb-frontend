@@ -1,0 +1,110 @@
+/* ============================================
+   PRODUCT DETAILS PAGE
+   ============================================ */
+
+.product-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
+
+/* Product Info Section */
+.product-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-info-title {
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  margin-bottom: 43px;
+}
+
+/* ============================================
+   ADD TO CART BUTTON
+   ============================================ */
+
+.product-add-to-cart {
+  width: 100%;
+  padding: 16px 32px;
+  background-color: var(--color-primary-green);
+  color: var(--color-bg-white);
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 40px;
+  transition: background-color 0.2s ease;
+}
+
+.product-add-to-cart:hover:not(:disabled) {
+  background-color: var(--color-primary-green-dark);
+}
+
+.product-add-to-cart:disabled {
+  background-color: var(--color-disabled);
+  cursor: not-allowed;
+}
+
+/* ============================================
+   PRODUCT DESCRIPTION
+   ============================================ */
+
+.product-description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+}
+
+.product-description p {
+  margin-bottom: 16px;
+}
+
+.product-description p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px 30px;
+  }
+
+  .product-details-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .cart-sidebar {
+    width: 100%;
+    max-width: 384px;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .header-nav {
+    gap: 16px;
+  }
+
+  .header-nav-link {
+    font-size: 14px;
+  }
+
+  .category-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+}

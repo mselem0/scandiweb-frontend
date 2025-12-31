@@ -1,0 +1,64 @@
+.product-attribute {
+  margin-bottom: 24px;
+}
+
+.product-attribute-label {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.product-attribute-options {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Size Attribute Options (Text) */
+.product-attribute-option {
+  min-width: 63px;
+  height: 45px;
+  padding: 0 16px;
+  border: 1px solid var(--color-border-dark);
+  background-color: var(--color-bg-white);
+  color: var(--color-text-primary);
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-attribute-option:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.product-attribute-option--selected {
+  background-color: var(--color-text-primary);
+  color: var(--color-bg-white);
+}
+
+/* Color Attribute Swatches */
+.product-attribute-swatch {
+  width: 32px;
+  height: 32px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.product-attribute-swatch:hover {
+  transform: scale(1.1);
+}
+
+.product-attribute-swatch--selected {
+  border-color: var(--color-border-dark);
+  transform: scale(1.1);
+}

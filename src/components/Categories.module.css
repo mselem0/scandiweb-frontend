@@ -1,0 +1,26 @@
+.header-nav {
+  display: flex;
+  gap: 32px;
+}
+
+.header-nav-link {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-text-primary);
+  letter-spacing: 0.02em;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease;
+}
+
+.header-nav-link:hover {
+  color: var(--color-primary-green);
+}
+
+.header-nav-link[data-testid="active-category-link"],
+.header-nav-link:global(.active) {
+  color: var(--color-primary-green);
+  border-bottom-color: var(--color-primary-green);
+}

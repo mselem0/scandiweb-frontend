@@ -1,0 +1,102 @@
+.product-card {
+  position: relative;
+  background-color: var(--color-bg-white);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px var(--color-shadow-light);
+}
+
+.product-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background-color: var(--color-bg-white);
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-image--out-of-stock {
+  opacity: 0.5;
+}
+
+.product-image-wrapper--out-of-stock {
+  position: relative;
+}
+
+/* Out of Stock Overlay */
+.product-out-of-stock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-out-of-stock-overlay);
+}
+
+.product-out-of-stock span {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Quick Shop Button */
+.product-quick-shop {
+  position: absolute;
+  bottom: 60px;
+  right: 16px;
+  width: 52px;
+  height: 52px;
+  background-color: var(--color-primary-green);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px var(--color-shadow-green);
+  transition: background-color 0.2s ease;
+  z-index: 10;
+}
+
+.product-card:hover .product-quick-shop {
+  display: flex;
+}
+
+.product-quick-shop:hover {
+  background-color: var(--color-primary-green-dark);
+}
+
+/* Product Info */
+.product-info {
+  padding: 24px 0 0 0;
+}
+
+.product-name {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
