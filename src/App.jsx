@@ -1,4 +1,4 @@
-import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Layout from "./components/Layout";
 import MainContent from "./components/MainContent";
@@ -15,7 +15,7 @@ import { CartProvider } from "./context/CartContext";
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <CategoriesProvider>
         <CartProvider>
           <Layout>
@@ -42,7 +42,7 @@ function App() {
           </Layout>
         </CartProvider>
       </CategoriesProvider>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
